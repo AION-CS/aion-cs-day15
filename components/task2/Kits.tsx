@@ -38,7 +38,7 @@ export function ArchFacts({ id }: { id: ArchId }) {
       <div>
         <dt className="smallcaps text-ash">{tt("Time to be in use", "Zeit bis zum Einsatz")}</dt>
         <dd className="text-ink">
-          <span className="tnum font-semibold">{tt(`${a.weeks} weeks`, `${a.weeks} Wochen`)}</span> · {tt(`${monthsOf(id)} months`, `${monthsOf(id)} Monate`)}
+          <span className="tnum font-semibold">{tt(`${a.weeks} weeks`, `${a.weeks} Wochen`)}</span> · {tt(`${monthsOf(id)} ${monthsOf(id) === 1 ? "month" : "months"}`, `${monthsOf(id)} ${monthsOf(id) === 1 ? "Monat" : "Monate"}`)}
         </dd>
       </div>
     </dl>
